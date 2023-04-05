@@ -114,7 +114,7 @@ public class Method {
 			return tot;
 		}
 		// 매개변수 생략기호(...)를 이용하여 값을 0개이상 전달받아 메소드에서 배열처럼 사용가능(개수 원하는만큼 설정가능)
-		int sumThree(int... array) {
+		int sumThree(int... array) { 
 			int tot=0;
 			for(int num: array) {
 				tot+=num;
