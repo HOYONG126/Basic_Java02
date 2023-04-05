@@ -92,4 +92,33 @@ public class Method {
 				return false;
 			}
 		}
+		
+		//배열을 반환하는 메소드
+		int[] returnArray() {
+			 /* int[] array= {10,20,30,40,50};
+			return array;   //배열의 메모리 주소를 반환한다
+			*/
+			//return {10,20,30,40,50}; <-오류발생
+			return new int[]{10,20,30,40,50};
+		}
+		//매개변수 3개에 전달된 정수들의 합계를 계산하여 반환하는 메소드
+		int sumOne(int num1,int num2,int num3) {
+			
+			return num1+num2+num3;
+		}
+		int sumTwo(int[] array) {
+			int tot=0;
+			for(int num: array) {
+				tot+=num;
+			}
+			return tot;
+		}
+		// 매개변수 생략기호(...)를 이용하여 값을 0개이상 전달받아 메소드에서 배열처럼 사용가능(개수 원하는만큼 설정가능)
+		int sumThree(int... array) {
+			int tot=0;
+			for(int num: array) {
+				tot+=num;
+			}
+			return tot;
+		}
 }

@@ -28,13 +28,34 @@ public class MethodApp {
 		System.out.println("합계(메소드 호출의 반환값)="+longSum_30_50);
 		System.out.println("합계(메소드 호출의 반환값)="+method.returnTotal(30, 50));
 		System.out.println("====================================================");
-		method.isChecked(10);
 		boolean isChecked=method.isChecked(10);
 		if(isChecked==true) {
-			System.out.println("매개변수로 전달된 값은 짝수입니다.");
+			System.out.println("매개변수로 전달된 값은 [짝수]입니다.");
 		}
 		else {
-			System.out.println("매개변수로 전달된 값은 홀수입니다.");
+			System.out.println("매개변수로 전달된 값은 [홀수]입니다.");
 		}
+		System.out.println("====================================================");
+		if(method.isChecked(10)) {
+			System.out.println("매개변수로 전달된 값은 [짝수]입니다.");
+		}
+		else {
+			System.out.println("매개변수로 전달된 값은 [홀수]입니다.");
+		}
+		System.out.println("====================================================");
+		//배열의 메모리 주소를 반환하는 메소드를 호출하면 반환된 메모리 주소를 참조변수에 저장
+		//=> 참조변수에 저장된 메모리 주소를 사용하여 배열 참조 가능
+		int[] array=method.returnArray();
+		for(int num: array) {
+			System.out.print(num+" ");
+		}
+		System.out.println("");
+		System.out.println("====================================================");
+		System.out.println("합계 : "+method.sumOne(10, 20, 30)); //method받는 객체의 받는 갯수, 자료형 꼭 맞추어줘야함
+		System.out.println("====================================================");
+		//System.out.println(method.sumTwo(10,20,30)); 오류
+		System.out.println(method.sumTwo(new int[] {10,20,30,40,50}));   //method로 배열 보낼 땐 이런 형식으로 보내야한다.
+		System.out.println("===================================");
+		System.out.println("합계:"+method.sumThree(10,20,30,40,50));
 }
 }
