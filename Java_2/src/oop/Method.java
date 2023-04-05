@@ -81,4 +81,15 @@ public class Method {
 			return total; //변수에 저장된 값을 메소드를 종료하며 메소드를 호출하는 명령에게 반환
 						  //=>반환되는 값의 자료형과 메소드의 반환형이 반드시 동일
 		}
+		
+		//매개변수로 정수값을 전달받아 홀수와 짝수를 구분하여 반환하는 메소드
+		// =>false 반환 : 홀수 ,  true 반환: 짝수
+		boolean isChecked(int num) {
+			if(num%2==0) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
 }
