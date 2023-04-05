@@ -28,6 +28,13 @@ public class MethodApp {
 		System.out.println("합계(메소드 호출의 반환값)="+longSum_30_50);
 		System.out.println("합계(메소드 호출의 반환값)="+method.returnTotal(30, 50));
 		System.out.println("====================================================");
-		
+		method.isChecked(10);
+		boolean isChecked=method.isChecked(10);
+		if(isChecked==true) {
+			System.out.println("매개변수로 전달된 값은 짝수입니다.");
+		}
+		else {
+			System.out.println("매개변수로 전달된 값은 홀수입니다.");
+		}
 }
 }
