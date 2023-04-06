@@ -16,7 +16,7 @@ public class CarApp {
 		// => 하나의 클래스로 사로 다른 객체를 여러개 생성 가능
 		// => 클래스는 객체를 생성하기 위한 틀(Template)
 		// => 객체를 생성하면 객체 필드에는 기본값(숫자형 : 0 , 논리형false, 참조형 null)이 초기값으로 자동 저장
-		
+	
 		Car carOne=new Car();
 		Car carOne2=new Car();
 		Car carOne3=new Car();
@@ -26,11 +26,18 @@ public class CarApp {
 		System.out.println(carOne3);
 		System.out.println("=============================");
 		//참조변수.필드명 : 참조변수에 저장된 객체로 필드에 접근하여 사용
-		carOne.modelName="싼타페";
-		carOne.engineStatus=false;
-		carOne.currentSpeed=0;
+		//객체의 필드에는 기본값이 초기값으로 자동저장
+		
+		//문제점)객체를 사용하여 필드에 직접적인 접근을 허용하면 필드에 비정상적인 값 저장 가능
+		//해결법)클래스에서 필드를 은닉화 처리하여 선언->은닉화된 필드에 접근식 오류발생
+		
+		//carOne.modelName="싼타페";
+		carOne.setModelName("싼타페");
+		System.out.println(carOne.getModelName());
+		carOne.setEngineStatus(false);
+		carOne.setCurrentSpeed(0);
 		//객체의 필드값 사용하여 출력
-		System.out.println("자동차 모델은:"+carOne.modelName+" 엔진 상태는:"+carOne.engineStatus+"현재속도는 :"+carOne.engineStatus);
+		System.out.println("자동차 모델은:"+carOne.getModelName()+" 엔진 상태는:"+carOne.isEngineStatus()+"현재속도는 :"+carOne.isEngineStatus());
 		System.out.println("=============================");
 		//참조변수 메소드 사용
 		//참조변수.메소드명(값, 값, ...)
