@@ -44,7 +44,7 @@ public class Car {
 	  }
 	  //속도증가
 	  void speedUp(int speed) {
-		  if(engineStatus==false) {
+		  if(!engineStatus) {
 			  System.out.println(modelName+"시동부터 걸어주세요 . ");
 			  return;
 		  }
