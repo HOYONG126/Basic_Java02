@@ -52,7 +52,7 @@ public class Car {
 	  //이동중지
 	  void moveStop(int speed) {
 		  currentSpeed=0;
-		  System.out.println(modelName+"자동차가 멈추었습니    다.");
+		  System.out.println(modelName+"자동차가 멈추었습니다.");
 	  }
 	public static void main(String[] args) {
 		
