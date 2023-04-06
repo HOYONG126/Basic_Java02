@@ -32,7 +32,7 @@ public class Car {
 	//시동on 메소드
 	  void startEngine(){
 		  engineStatus=true;
-		  System.out.println(engineStatus+"의 시동을 켰습니다.");
+		  System.out.println(modelName+"의 시동을 켰습니다.");
 	  }
 	  //시동off 메소드
 	  void stopEngine() { 
@@ -41,16 +41,30 @@ public class Car {
 	  }
 	  //속도증가
 	  void speedUp(int speed) {
+		  if(engineStatus==false) {
+			  System.out.println(modelName+"시동부터 걸어주세요 . ");
+			  return;
+		  }
+		  if(currentSpeed+speed>150) {
+			  speed=150-currentSpeed;
+		  }
 		  currentSpeed+=speed;
 		  System.out.println(modelName+"의 속도가"+speed+"Km/h 증가되었습니다. 현재속도 : "+currentSpeed + "Km/h");
 	  }
 	  //속도감소
 	  void speedDown(int speed) {
+		  if(engineStatus==false) {
+			  System.out.println(modelName+"시동부터 걸어주세요 . ");
+			  return;
+		  }
+		  if(currentSpeed < speed) {
+			  speed=currentSpeed;
+		  }
 		  currentSpeed-=speed;
 		  System.out.println(modelName+"의 속도가"+speed+"Km/h 감소되었습니다. 현재속도 : "+currentSpeed + "Km/h");
 	  }
 	  //이동중지
-	  void moveStop(int speed) {
+	  void moveStop() {
 		  currentSpeed=0;
 		  System.out.println(modelName+"자동차가 멈추었습니다.");
 	  }
