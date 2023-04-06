@@ -36,6 +36,9 @@ public class Car {
 	  }
 	  //시동off 메소드
 	  void stopEngine() { 
+		  if(currentSpeed!=0) {
+			  moveStop();
+		  }
 		  engineStatus=false;
 		  System.out.println(modelName+"의 시동을 껐습니다.");
 	  }
