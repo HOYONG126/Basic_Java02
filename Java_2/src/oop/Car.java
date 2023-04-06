@@ -69,6 +69,5 @@ public class Car {
 		  System.out.println(modelName+"자동차가 멈추었습니다.");
 	  }
 	public static void main(String[] args) {
-		
 }
 }
