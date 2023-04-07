@@ -56,12 +56,16 @@ public class StudentApp {
 		int total=0;
 		for(Student students : student) {
 			students.display();
-			total+=students.getTot();
+			//정적 필드는 public 접근제한자로 설정된 경우 클래스를 이용하여 접근 가능
+			//객체로 접근 가능하지만 경고 발생
+			//students.total+=students.getTot();
+			//정적 필드가 Private 접근 제한자로 설정된 경우 메소드를 이용하여 접근 가능
+			//=>정적 메소드는 객체가 아닌 클래스를 이용하여 호출 가능
+			Student.setTotal(Student.getTotal()+students.getTot());
 		}
 		System.out.println("====================");
 		//모든 학생들의 점수들의 합계를 계산하여 출력
 		System.out.println("총 합계 = "+total);
 		System.out.println("====================");
-		;
 }
 }
