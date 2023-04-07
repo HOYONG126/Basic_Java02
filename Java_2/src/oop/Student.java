@@ -6,7 +6,7 @@ public class Student {
 		private String name;
 		
 		public Student() {
-			this.(0,0,0,"아무개");
+			this(0,0,0,"아무개");
 		}
 		//생성자 Constructor
 		public Student(int hakbun, int kor, int eng, String name) {
@@ -15,6 +15,9 @@ public class Student {
 			this.kor = kor;
 			this.eng = eng;
 			this.name = name;
+			//총점을 계산하여 필드에 저장하는 명령 작성 -메소드호출
+			//tot=kor=eng;     //코드 작성보다 메소드 호출을 권장
+			this.calcTot();
 		}
 		public int getHakbun() {
 			return hakbun;
@@ -27,12 +30,14 @@ public class Student {
 		}
 		public void setKor(int kor) {
 			this.kor = kor;
+			calcTot();
 		}
 		public int getEng() {
 			return eng;
 		}
 		public void setEng(int eng) {
 			this.eng = eng;
+			calcTot();
 		}
 		public int getTot() {
 			return tot;
@@ -47,11 +52,16 @@ public class Student {
 			this.name = name;
 		}
 		
-		public void display() {
-			System.out.println("이름 = "+ name);
-			System.out.println("학번 = "+ hakbun);
-			System.out.println("영어 = "+ eng+"+t국어 = "+ kor+"\n 총점 = "+ tot);
+		//은닉화 선언된 메소드-클래스 내부에서만 호출하여 사용하는 메소드
+		//=>코드의 중복성을 최소화 하기 위한 기능을 제공하는 메소드
+		
+		// public void calcTot() { //총점을 계산하는 메소드
+		private void calcTot() { // =>클래스내부에서만 사용하는 것 (다른 main에서 불러오기 불가)
+			tot=kor+eng;
 		}
-		
-		
+		public void display() {
+			System.out.print("이름 = "+ name);
+			System.out.print(" 학번 = "+ hakbun);
+			System.out.println("영어 = "+ eng+"  국어 = "+ kor+"\n 총점 = "+ tot);
+		}
 }
