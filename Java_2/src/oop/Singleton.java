@@ -12,7 +12,7 @@ public class Singleton {
 	private static Singleton _instance;
 	//생성자를 은닉화 선언 -클래스 외부에서 생성자에 접근하지 못하도록 설정
 	// => 객체 생성 불가능
-	public Singleton() {
+	private Singleton() {
 		// TODO Auto-generated constructor stub
 	}
 	//정적 영역(Static Block) : 클래스를 읽어 메모리(메소드영역)에 저장된 후 자동으로 실행될 명령을 작성하기 위한 영역
