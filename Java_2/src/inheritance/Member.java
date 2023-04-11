@@ -21,7 +21,6 @@ public class Member {
 		// TODO Auto-generated constructor stub
 	}
 	public Member(String id, String name) {
-		super();
 		this.id = id;
 		this.name = name;
 	}
