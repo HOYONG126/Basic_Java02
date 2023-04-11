@@ -8,7 +8,7 @@ public class MemberEventApp {
 		// => 자식클래스의 참조변수에는 자식클래스 객체의 메모리 주소가 저장되어 자식클래스
 		//객체의 필드와 메소드를 참조하지만 상속관계에 의해 부모클래스 객체의 필드 또는
 		//메소드 참조 가능	
-		MemberEvent member1=new MemberEvent();
+		MemberEvent member1=new MemberEvent(); //다 이렇게
 		
 		member1.setId("abc123");
 		member1.setName("홍길동");
@@ -16,7 +16,7 @@ public class MemberEventApp {
 		
 		member1.display();
 		System.out.println("=============================================================");
-		MemberEvent member2=new MemberEvent("xyz789", "임꺽정", "xyz@itwill.xyz");
+		MemberEvent member2=new MemberEvent("xyz789", "임꺽정", "xyz@itwill.xyz"); 
 		member2.display();
 		System.out.println("=============================================================");
 	}

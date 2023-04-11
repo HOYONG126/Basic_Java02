@@ -55,7 +55,7 @@ public class MemberCastApp {
 		*/
 		
 		//객체 연산자(.)보다 Cast 연산자가 먼저 실행되도록 () 연산자 사용
-		((MemberEvent)member4).setEmail("opq@itwill.xyz");
+		((MemberEvent)member4).setEmail("opq@itwill.xyz");   //자식클래스의 오버라이드를 가져오는경우는 강제형변환 안해줘도된다.
 		
 		
 		//((MemberEvent)member4).display();
