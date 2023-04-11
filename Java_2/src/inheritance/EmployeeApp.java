@@ -3,6 +3,9 @@ package inheritance;
 //사원 급여 관리 프로그램
 public class EmployeeApp {
 	public static void main(String[] args) {
+		//추상클래스로 객체를 생성할 경우 에러발생
+		//=>추상클래스로 참조변수 생성 가능
+		//Employee employee=new E
 		
 		/*
 		//부모클래스로 참조변수를 생성하여 자식클래스로 객체를 생성하여 저장 가능
