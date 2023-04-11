@@ -27,5 +27,7 @@ public class CarApp {
 		//String 클래스의 참조변수를 출력할 경우 자동으로 String 클래스의 toString() 메소드 호출
 		System.out.println("name = "+name);
 		System.out.println("==============================================================");
+		
+		System.out.println(car.toString()); 
 	}
 }
