@@ -22,8 +22,21 @@ public class EmployeeRegular extends Employee {
 		this.anuualSalary = anuualSalary;
 	}
 	
-	//급여를 반환하는 메소드
+	//급여를 계산하여 반환하는 메소드
 	public int computeSalary() {
 		return anuualSalary/12;
 	}
+
+	@Override
+	public int computePay() {
+		return anuualSalary/12;
+	}
+	
+	/*
+	//final 메소드를 오버라이드 선언하여 에러 발생
+	@Override
+	public int computeIncentive() {
+		return 100000000;
+	}
+	*/
 }
