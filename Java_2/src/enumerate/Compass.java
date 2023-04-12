@@ -8,5 +8,4 @@ public enum Compass {
 	//=> private final 제한자를 사용하여 필드선언
 	//상수필드의 자료형 또는 저장값을 변경하기 위한 필드 선언
 	//private final int value; //상수필드값을 변경하기 위한 필드
-	private final String value; //상수필드의 자료형을 변경하기 위한 필드
 }
