@@ -7,4 +7,4 @@ public class OuterThreeApp {
 		outerThree.outerDisplay();
 		outerThree.local();
 	}
-}
+} 
