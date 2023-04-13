@@ -8,7 +8,7 @@ public class OuterOne {
 	
 	public OuterOne() {
 		// TODO Auto-generated constructor stub
-	}
+	} 
 
 	public OuterOne(int outerNum) {
 		super();
