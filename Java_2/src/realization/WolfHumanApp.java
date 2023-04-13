@@ -64,6 +64,7 @@ public class WolfHumanApp {
 		//묵시적 객체 형변환에 의해 자동으로 자식클래스의 메소드가 호출
 		wolf.fastWalk();
 		wolf.cryLoudly();
+		((WolfHuman)wolf).change();
 		System.out.println("=============================================================");
 	}  
 }
