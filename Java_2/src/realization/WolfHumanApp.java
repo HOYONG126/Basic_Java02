@@ -65,5 +65,5 @@ public class WolfHumanApp {
 		wolf.fastWalk();
 		wolf.cryLoudly();
 		System.out.println("=============================================================");
-	}
+	}  
 }
