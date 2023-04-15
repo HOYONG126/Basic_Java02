@@ -6,5 +6,5 @@ public class PackageMemberUse {
 		
 		member.num=100;
 		member.display();
-	}
+}
 }
