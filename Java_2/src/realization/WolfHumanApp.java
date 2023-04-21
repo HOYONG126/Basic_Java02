@@ -45,7 +45,7 @@ public class WolfHumanApp {
 		// => 참조변수는 기본적으로 부모클래스의 메소드만 호출 가능
 		// => 객체 형변환을 이용하면 참조변수로 자식클래스의 메소드 호출 가능
 		Human human=new WolfHuman();
-		
+		System.out.println(human instanceof WolfHuman);
 		human.speak();
 		human.walk();
 		human.smile();
